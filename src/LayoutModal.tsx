@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function LayoutExample({ image, good = false, alt }: { image: string, good?: boolean, alt: string }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     <span className="hierarchy-verdict" role="img" aria-label={good ? 'Clear layout' : 'Unclear layout'}>{good ? '👍' : '👎'}</span>
-    <img src={`/images/layout/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/layout/${image}.webp`} alt={alt} />
   </figure>
 }
 
@@ -45,7 +45,7 @@ const LayoutModal = forwardRef<HTMLDialogElement>(function LayoutModal(_, ref) {
       <section className="hierarchy-section" aria-labelledby="layout-forms-title">
         <h3 id="layout-forms-title">Form layout <span>inspired by the final output</span></h3>
         <p>Forms are essential for collecting user information but are often overlooked in UI design. By designing forms around how the information will be used or displayed, we can make them more intuitive, engaging, and easier to complete.</p>
-        <figure className="layout-final-display"><img src="/images/layout/listing-display.webp" alt="Final display of a Toyota RAV4 Hybrid listing, with annotations identifying the image, product and price, description, location, and tags or categories." /></figure>
+        <figure className="layout-final-display"><img src={`${import.meta.env.BASE_URL}images/layout/listing-display.webp`} alt="Final display of a Toyota RAV4 Hybrid listing, with annotations identifying the image, product and price, description, location, and tags or categories." /></figure>
         <p>Suppose you’re designing a form for a marketplace platform where users list items they want to sell. Instead of a standard, linear form, you could design the form layout to mirror the final listing page.</p>
         <div className="hierarchy-comparison layout-pair">
           <LayoutExample image="form-linear" alt="Standard Create new listing form with vertically stacked Item, Price, Description, Categories, Location and Images fields." />

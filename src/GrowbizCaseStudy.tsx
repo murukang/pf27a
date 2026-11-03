@@ -4,7 +4,7 @@ import BenefitTable from './CaseStudyTable'
 
 const headings = ['Problem area', 'Research focus', 'Key output']
 function GrowbizScreen({ name, alt, width, height }: { name:string; alt:string; width:number; height:number }) {
-  return <figure className="growbiz-screen"><img src={`/images/growbiz/${name}.webp`} alt={alt} width={width} height={height} loading={name === 'dashboard' ? 'eager' : 'lazy'} /><figcaption>{alt}</figcaption></figure>
+  return <figure className="growbiz-screen"><img src={`${import.meta.env.BASE_URL}images/growbiz/${name}.webp`} alt={alt} width={width} height={height} loading={name === 'dashboard' ? 'eager' : 'lazy'} /><figcaption>{alt}</figcaption></figure>
 }
 const financeFindings = [
   ['Difficulty understanding the overall financial position', 'The consolidated dashboard provides a single place to monitor business activity, identify potential risks, and review operational and financial performance.'],
@@ -73,6 +73,6 @@ export default function GrowbizCaseStudy() {
       ['Poor sales-pipeline visibility', 'Identify conversion patterns and weak stages', 'Pipeline Conversion visualisation'],
       ['Unclear team utilisation', 'Compare capacity with utilisation targets', 'Team Utilisation KPI and detailed report'],
     ]} /></section>
-    <footer className="case-footer"><a href="/#recent-works">Back to recent works</a><a href="/#contact">Discuss this project <Arrow /></a></footer>
+    <footer className="case-footer"><a href={`${import.meta.env.BASE_URL}#recent-works`}>Back to recent works</a><a href={`${import.meta.env.BASE_URL}#contact`}>Discuss this project <Arrow /></a></footer>
   </div></main>
 }

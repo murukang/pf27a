@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function DepthExample({ image, good = false, alt }: { image: string, good?: boolean, alt: string }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     <span className="hierarchy-verdict" role="img" aria-label={good ? 'Effective depth and texture' : 'Ineffective depth and texture'}>{good ? '👍' : '👎'}</span>
-    <img src={`/images/depth-texture/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/depth-texture/${image}.webp`} alt={alt} />
   </figure>
 }
 
@@ -50,7 +50,7 @@ const DepthTextureModal = forwardRef<HTMLDialogElement>(function DepthTextureMod
         <p className="depth-caption">It’s an easy but impactful way to improve your designs, creating more coherent and engaging UIs.</p>
       </section>
       <section className="hierarchy-section" aria-labelledby="depth-system"><h3 id="depth-system">Define your shadow system</h3><p>A consistent shadow system defines how shadows are used across your UI. It helps maintain visual harmony, supports brand identity, and improves usability. Shadow styles should match the overall design, whether minimal, bold, or somewhere in between.</p>
-        <figure className="depth-shadow-scale"><img src="/images/depth-texture/shadow-scale.webp" alt="Six white cards showing progressively stronger shadow styles labeled xs, sm, md, lg, xl and 2xl." /></figure>
+        <figure className="depth-shadow-scale"><img src={`${import.meta.env.BASE_URL}images/depth-texture/shadow-scale.webp`} alt="Six white cards showing progressively stronger shadow styles labeled xs, sm, md, lg, xl and 2xl." /></figure>
         <div className="depth-system-notes"><p>A consistent shadow system can include three levels:</p><ul><li>Soft Shadow: Adds subtle depth to buttons, small cards, and thumbnails.</li><li>Medium Shadow: Creates more emphasis for elements like modals and pop-ups.</li><li>Strong Shadow: Highlights elevated or important elements, such as dropdown menus and alerts.</li></ul><p>Adjust shadow intensity, spread, and color based on the element’s purpose while maintaining visual consistency.</p></div>
       </section>
       <section className="hierarchy-section" aria-labelledby="depth-outlines"><h3 id="depth-outlines">Creating depth through outlines and background colours</h3><p>Subtle background colors and borders can add depth and improve visual hierarchy in UI design, especially in information-heavy dashboards. For example, placing white cards on a light grey background creates visual separation, making the interface more structured, balanced, and easier to navigate.</p>

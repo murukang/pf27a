@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function InteractionImage({ image, alt, good }: { image: string, alt: string, good?: boolean }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     {good !== undefined && <span className="hierarchy-verdict" role="img" aria-label={good ? 'Lower interaction cost' : 'Higher interaction cost'}>{good ? '👍' : '👎'}</span>}
-    <img src={`/images/interaction-cost/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/interaction-cost/${image}.webp`} alt={alt} />
   </figure>
 }
 

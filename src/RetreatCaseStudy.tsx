@@ -3,7 +3,7 @@ import Arrow from './Arrow'
 import BenefitTable from './CaseStudyTable'
 
 function ScreenImage({ name, alt }: { name: string; alt: string }) {
-  return <figure className="case-screen"><img src={`/images/retreat/${name}.webp`} alt={alt} width="1476" height="930" loading="lazy" /><figcaption>{alt}</figcaption></figure>
+  return <figure className="case-screen"><img src={`${import.meta.env.BASE_URL}images/retreat/${name}.webp`} alt={alt} width="1476" height="930" loading="lazy" /><figcaption>{alt}</figcaption></figure>
 }
 const journey = [
   ['Discover', 'Understand the offer and explore properties.', 'Promotional claims may be unclear.', 'Clarify the offer, eligibility and primary CTA.'],
@@ -91,7 +91,7 @@ export default function RetreatCaseStudy() {
           ['Direct Navigation Access', 'Get Directions / map link beside the address', 'Supports one-tap map navigation and easier travel to the site.'],
         ]} />
       </section>
-      <footer className="case-footer"><a href="/#recent-works">← Back to recent works</a><a href="/#contact">Discuss this project <Arrow /></a></footer>
+      <footer className="case-footer"><a href={`${import.meta.env.BASE_URL}#recent-works`}>← Back to recent works</a><a href={`${import.meta.env.BASE_URL}#contact`}>Discuss this project <Arrow /></a></footer>
     </div>
   </main>
 }

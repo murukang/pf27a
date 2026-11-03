@@ -4,7 +4,7 @@ type Example = { image: string, alt: string, good?: boolean }
 function TipExample({ image, alt, good }: Example) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     {good !== undefined && <span className="hierarchy-verdict" role="img" aria-label={good ? 'Improved user experience' : 'Less effective user experience'}>{good ? '👍' : '👎'}</span>}
-    <img src={`/images/other-tips/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/other-tips/${image}.webp`} alt={alt} />
   </figure>
 }
 function TipComparison({ examples, triple = false }: { examples: Example[], triple?: boolean }) {

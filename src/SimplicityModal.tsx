@@ -15,11 +15,11 @@ const SimplicityModal = forwardRef<HTMLDialogElement>(function SimplicityModal(_
         <div className="hierarchy-comparison simplicity-comparison">
           <figure className="hierarchy-example is-weak">
             <span className="hierarchy-verdict" role="img" aria-label="Cluttered design">👎</span>
-            <img src="/images/simplicity/cart-cluttered.webp" alt="Cluttered shopping cart with large suit images and repeated material, view count, sales count and return-policy details competing with the price and checkout action." />
+            <img src={`${import.meta.env.BASE_URL}images/simplicity/cart-cluttered.webp`} alt="Cluttered shopping cart with large suit images and repeated material, view count, sales count and return-policy details competing with the price and checkout action." />
           </figure>
           <figure className="hierarchy-example is-good">
             <span className="hierarchy-verdict" role="img" aria-label="Simple design">👍</span>
-            <img src="/images/simplicity/cart-simple.webp" alt="Simplified shopping cart with balanced suit images, clear product names, color and size, prices and quantity controls, followed by the total and a prominent Proceed to checkout button." />
+            <img src={`${import.meta.env.BASE_URL}images/simplicity/cart-simple.webp`} alt="Simplified shopping cart with balanced suit images, clear product names, color and size, prices and quantity controls, followed by the total and a prominent Proceed to checkout button." />
           </figure>
         </div>
         <div className="simplicity-explanation">

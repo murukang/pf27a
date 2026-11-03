@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function ConsistencyExample({ image, good = false, alt }: { image: string, good?: boolean, alt: string }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     <span className="hierarchy-verdict" role="img" aria-label={good ? 'Consistent design' : 'Inconsistent design'}>{good ? '👍' : '👎'}</span>
-    <img src={`/images/consistency/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/consistency/${image}.webp`} alt={alt} />
   </figure>
 }
 

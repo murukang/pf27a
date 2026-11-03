@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function AlignmentExample({ image, good = false, alt }: { image: string, good?: boolean, alt: string }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     <span className="hierarchy-verdict" role="img" aria-label={good ? 'Consistent alignment' : 'Inconsistent alignment'}>{good ? '👍' : '👎'}</span>
-    <img src={`/images/alignment/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/alignment/${image}.webp`} alt={alt} />
   </figure>
 }
 

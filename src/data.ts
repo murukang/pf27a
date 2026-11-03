@@ -12,7 +12,7 @@ export const recentWorks = [
     slug: 'retreat', category: 'Website', name: 'Retreat - Real estate',
     project: 'Retreat — Real Estate Website', platform: 'Website / Responsive concept.',
     role: 'UX Research & UI Design', users: 'Property buyers and prospective homebuyers.',
-    image: '/images/retreat-preview.png', imageAlt: 'Retreat property website with a modern villa and property discovery features',
+    image: `${import.meta.env.BASE_URL}images/retreat-preview.png`, imageAlt: 'Retreat property website with a modern villa and property discovery features',
     sections: [
       { title: 'Project objective', body: 'Design a property discovery experience that helps prospective buyers compare residential properties, understand key features, and book a site visit through a clear, low-friction journey.' },
       { title: 'Project focus', items: [
@@ -30,7 +30,7 @@ export const recentWorks = [
     slug: 'g2o', category: 'Web Application', name: 'G2O - Shipping',
     project: 'G2O — Bulk Cargo Management Application', platform: 'Web Application.',
     role: 'UX Research & UI Design', users: 'Shipping Cargo Planners',
-    image: '/images/g2o-preview.png', imageAlt: 'G2 Ocean shipping application login screen over a cargo vessel at sea',
+    image: `${import.meta.env.BASE_URL}images/g2o-preview.png`, imageAlt: 'G2 Ocean shipping application login screen over a cargo vessel at sea',
     sections: [
       { title: 'The Product', body: 'G2O Bulk Cargo Management Application, an enterprise web solution built for maritime shipping planners.' },
       { title: 'The Challenge', body: 'Managing complex multi-port rotations, cargo co-stowage rules, and vessel stability across disconnected tools and spreadsheets created heavy cognitive overload and high risk for operational errors.' },
@@ -45,7 +45,7 @@ export const recentWorks = [
     slug: 'growbiz', category: 'ERP Application', name: 'Growbiz - Business Management System',
     project: 'Growbiz - Business Management System', platform: 'Website',
     role: 'Lead UX Researcher & UI Designer', users: 'Managers and top-level executives',
-    image: '/images/growbiz-preview.png', imageAlt: 'Growbiz ERP dashboard showing project performance, revenue, expenses and team workload',
+    image: `${import.meta.env.BASE_URL}images/growbiz-preview.png`, imageAlt: 'Growbiz ERP dashboard showing project performance, revenue, expenses and team workload',
     sections: [
       { title: 'The product', body: 'Growbiz is a unified business management platform designed to streamline operations.' },
       { title: 'The Challenge', body: 'Managers often struggle with scattered communication, opaque task ownership, and disconnects between project progress and cash flow. Managing complex, multi-stage projects on disconnected tools leads to delayed handoffs, lost revenue visibility, and reduced operational efficiency.' },

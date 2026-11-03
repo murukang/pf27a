@@ -218,7 +218,7 @@ const prefer = [
 ]
 
 function TypographyExample({ example, good }: { example: Example, good: boolean }) {
-  return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}><span className="hierarchy-verdict" role="img" aria-label={good ? 'Readable typography' : 'Typography to improve'}>{good ? '👍' : '👎'}</span><img src={`/images/typography/${example.image}.webp`} alt={example.alt} /></figure>
+  return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}><span className="hierarchy-verdict" role="img" aria-label={good ? 'Readable typography' : 'Typography to improve'}>{good ? '👍' : '👎'}</span><img src={`${import.meta.env.BASE_URL}images/typography/${example.image}.webp`} alt={example.alt} /></figure>
 }
 
 const TypographyModal = forwardRef<HTMLDialogElement>(function TypographyModal(_, ref) {
@@ -235,7 +235,7 @@ const TypographyModal = forwardRef<HTMLDialogElement>(function TypographyModal(_
         <h3 id={`type-${section.id}`}>{section.title}</h3>
         {section.paragraphs.map(text => <p key={text}>{text}</p>)}
         {section.bullets && <ul className="typography-bullets">{section.bullets.map(text => <li key={text}>{text}</li>)}</ul>}
-        {section.illustration && <figure className="typography-illustration"><img src={`/images/typography/${section.illustration.image}.webp`} alt={section.illustration.alt} /></figure>}
+        {section.illustration && <figure className="typography-illustration"><img src={`${import.meta.env.BASE_URL}images/typography/${section.illustration.image}.webp`} alt={section.illustration.alt} /></figure>}
         {section.examples && <div className={`hierarchy-comparison typography-pair ${section.wide ? 'typography-pair-wide' : ''}`}>{section.examples.map((example, index) => <TypographyExample key={example.image} example={example} good={index === 1} />)}</div>}
         {section.notes && <div className="typography-notes">{section.notes.map(text => <p key={text}>{text}</p>)}</div>}
       </section>)}

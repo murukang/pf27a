@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function WhitespaceExample({ image, good = false, alt }: { image: string, good?: boolean, alt: string }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     <span className="hierarchy-verdict" role="img" aria-label={good ? 'Balanced whitespace' : 'Unbalanced whitespace'}>{good ? '👍' : '👎'}</span>
-    <img src={`/images/whitespace/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/whitespace/${image}.webp`} alt={alt} />
   </figure>
 }
 

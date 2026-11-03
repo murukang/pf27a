@@ -15,11 +15,11 @@ const ProximityModal = forwardRef<HTMLDialogElement>(function ProximityModal(_, 
         <div className="hierarchy-comparison proximity-comparison">
           <figure className="hierarchy-example is-weak">
             <span className="hierarchy-verdict" role="img" aria-label="Unclear proximity">👎</span>
-            <img src="/images/proximity/form-unclear.webp" alt="Contact details form with the Surname label spaced equally, 28 pixels from the field above and 28 pixels from its own field, making the relationship unclear." />
+            <img src={`${import.meta.env.BASE_URL}images/proximity/form-unclear.webp`} alt="Contact details form with the Surname label spaced equally, 28 pixels from the field above and 28 pixels from its own field, making the relationship unclear." />
           </figure>
           <figure className="hierarchy-example is-good">
             <span className="hierarchy-verdict" role="img" aria-label="Clear proximity">👍</span>
-            <img src="/images/proximity/form-clear.webp" alt="Improved contact details form with the Surname label 12 pixels from its own field and 32 pixels from the field above, clearly grouping the label with its input." />
+            <img src={`${import.meta.env.BASE_URL}images/proximity/form-clear.webp`} alt="Improved contact details form with the Surname label 12 pixels from its own field and 32 pixels from the field above, clearly grouping the label with its input." />
           </figure>
         </div>
         <p>In the improved form, the “Surname” label is placed 12px from its field and 32px from the “First Name” field above. This makes it clear which label belongs to which field. By grouping related elements closer together, the form becomes easier to understand and use.</p>

@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 function ContrastExample({ image, good = false, alt }: { image: string, good?: boolean, alt: string }) {
   return <figure className={`hierarchy-example ${good ? 'is-good' : 'is-weak'}`}>
     <span className="hierarchy-verdict" role="img" aria-label={good ? 'Clear contrast' : 'Low contrast'}>{good ? '👍' : '👎'}</span>
-    <img src={`/images/contrast/${image}.webp`} alt={alt} />
+    <img src={`${import.meta.env.BASE_URL}images/contrast/${image}.webp`} alt={alt} />
   </figure>
 }
 
