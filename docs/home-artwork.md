@@ -1,0 +1,8 @@
+# Home background artwork
+
+Asset: `public/images/problem-solving-maze.jpg`
+Generated with the built-in imagegen tool. The PNG master remains in the Codex generated-images directory; the site uses an optimized JPEG. CSS blends the image into the existing paper background with reduced opacity, multiply blending, and a feathered radial mask. The image is decorative and hidden from assistive technology.
+
+## Generation prompt
+
+Use case: stylized-concept. Asset type: subtle background artwork for a senior product designer portfolio hero, NOT a webpage or mockup. Create one refined landscape 3:2 image: a tactile architectural paper maze representing problem solving, viewed from an elevated three-quarter angle. Low sculptural ivory walls form complex paths on the left that resolve into one clear, gently curving muted blue path emerging toward the right, a quiet visual metaphor for turning complexity into clarity. A few graceful paths, sophisticated minimal composition, not a dense labyrinth. Matte warm ivory paper and plaster surfaces, subtle pencil-gray details, one restrained desaturated blue route. Seamless warm off-white backdrop color #f4f2ec with ample empty space around every edge, no horizon, no hard frame. Soft diffuse daylight, very soft shallow shadows, low contrast, airy editorial still life. All architecture within the central 65 percent of the canvas so edges remain empty and naturally blend into an off-white website background. No text, no letters, no logos, no icons, no people, no luminous effects. Image will sit quietly BEHIND large black and blue text on the RIGHT HALF of a hero; maintain subdued tones and a very soft silhouette so it never dominates.

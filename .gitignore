@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+/*-preview.png
+/design-systems-updated.png
+/How to Open in Browser.txt
+.env
+.env.*
+!.env.example
+*.log
