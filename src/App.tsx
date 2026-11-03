@@ -80,11 +80,11 @@ function RecentWorkCard({ project, index }: { project: RecentProject, index: num
       <div className="recent-card-summary"><h4>The project</h4><p>{project.summary}</p></div>
       <div className="recent-card-focus"><h4>Design focus</h4><p>{project.focus}</p></div>
       <dl className="recent-card-meta"><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>Designed for</dt><dd>{project.users}</dd></div></dl>
-      <div className="recent-card-actions">{storyUrl ? <a className="recent-story-button" href={storyUrl}>View full story <Arrow /></a> : <button className="recent-story-button" onClick={openStory}>View full story <Arrow /></button>}<a className="recent-demo" href="#contact">Discuss this project <Arrow /></a></div>
+      <div className="recent-card-actions">{storyUrl ? <a className="recent-story-button" href={storyUrl}>View full story <Arrow /></a> : <button className="recent-story-button" onClick={openStory}>View full story <Arrow /></button>}<a className="recent-demo" href={`${import.meta.env.BASE_URL}#contact`}>Discuss this project <Arrow /></a></div>
     </div>
     <dialog ref={dialog} className="recent-dialog" aria-labelledby={`story-${project.slug}`} onClick={event => { if (event.target === event.currentTarget) dialog.current?.close() }}>
       <div className="recent-dialog-top"><p>Case study {index + 1} / {project.category}</p><button onClick={() => dialog.current?.close()} aria-label="Close case study">×</button></div>
-      <h2 id={`story-${project.slug}`}>{project.name}</h2><img src={project.image} alt={project.imageAlt} width="443" height="278" /><StoryContent project={project} /><a className="recent-story-button" href="#contact" onClick={() => dialog.current?.close()}>Discuss this project <Arrow /></a>
+      <h2 id={`story-${project.slug}`}>{project.name}</h2><img src={project.image} alt={project.imageAlt} width="443" height="278" /><StoryContent project={project} /><a className="recent-story-button" href={`${import.meta.env.BASE_URL}#contact`} onClick={() => dialog.current?.close()}>Discuss this project <Arrow /></a>
     </dialog>
   </article>
 }
@@ -187,5 +187,17 @@ export default function App() {
   const isG2O = path === '/work/g2o'
   const isGrowbiz = path === '/work/growbiz'
   const isCaseStudy = isRetreat || isG2O || isGrowbiz
+  useEffect(() => {
+    const scrollToSection = () => {
+      const section = document.getElementById(window.location.hash.slice(1))
+      section?.scrollIntoView({ block: 'start' })
+    }
+    const frame = requestAnimationFrame(scrollToSection)
+    window.addEventListener('hashchange', scrollToSection)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('hashchange', scrollToSection)
+    }
+  }, [])
   return <div className={`site-shell ${isCaseStudy ? 'case-study-shell' : ''}`}><Header homeLinks={isCaseStudy} />{isGrowbiz ? <GrowbizCaseStudy /> : isG2O ? <G2OCaseStudy /> : isRetreat ? <RetreatCaseStudy /> : <main><Hero /><About /><RecentWorks /><DesignSystems /><ContactFooter /></main>}</div>
 }
